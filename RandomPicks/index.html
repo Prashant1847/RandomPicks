@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Picks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="javascript/canvas.js"></script> <!-- this handles site title rendering -->
+    <script defer src="javascript/main.js"></script>
+</head>
+
+<body>
+    <!-- canvas and img with make up the title of page -->
+    <canvas id="canvas"></canvas>
+    <img src="images/surprise-box.png" class="logo"></div>
+    <!-- end -->
+
+    <section class="about-section">
+        <div class="about-title">
+            What is this<br>all <span class="word-about-title">about</span><br> ??
+        </div>
+        <div class="flex-center arrow-div">
+            <img src="images/arrow-right-solid.svg" class="arrowSign">
+        </div>
+        <div>
+            <img src="images/surprise-box.png" class="logo-about-section">
+        </div>
+        <div class="flex-center arrow-div">
+            <img src="images/arrow-right-solid.svg" class="arrowSign">
+        </div>
+        <div>
+            <div class="about-des-heading"> It's all about <span class="word-about-des">Ramdon Picks</span></div>
+            <div class="about-des">
+                Bored of watching the same content???<br>
+                This site gives you random and interesting suggestions <br>
+                So step out and explore some new content...
+            </div>
+        </div>
+    </section>
+
+    <div class="heading joke-anim">How about a joke first?</div>
+    <section class="joke-section flex-center">
+        <div class="joke-bg section-overlay"></div>
+        <div class="joke">What are jokes??</div>
+        <div>
+            <span class="line-joke">Want to laugh more??</span><button class="new-joke-btn">Sure!!</button>
+        </div>
+    </section>
+
+    <template class="game-card-template">
+        <div class="grid-card">
+            <div class="game-img-container">
+                <img src="" class="content-img skeleton">
+            </div>
+            <div class="game-details">
+                <div class="grid-item-title">
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+                <div class="games-tags">
+                    <button>Genres</button>
+                    <button>Ratings</button>
+                    <button>Tags</button>
+                    <button>Platforms</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <section class="section-with-grid games-section">
+        <div class="heading ">Games Picks</div>
+        <div class="games-section-bg section-overlay"></div>
+        <div class="grid-container game-grid">
+            <span class="refresh-guildlines white">double click anywhere to refresh</span>
+            <!-- This will be filled by using template js -->
+
+        </div>
+    </section>
+
+    <template class="song-card-template">
+        <a href="#">
+            <div class="grid-card">
+                <div class="grid-img-container">
+                    <img src="" class="content-img skeleton">
+                </div>
+                <div class="song-title">
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+                <div class="song-subtitle">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+            </div>
+        </a>
+    </template>
+    <section class="section-with-grid songs-section">
+        <div class="songs-section-bg section-overlay"></div>
+        <div class="heading heading-black ">Songs Picks!!</div>
+        <div class="grid-container songs-grid">
+            <span class="refresh-guildlines">double click anywhere to refresh</span>
+            <!-- this will be filled by cards from template  -->
+        </div>
+    </section>
+
+    <template class="movie-card-template">
+        <div class="grid-card">
+            <div class="grid-img-container">
+                <img src="" class="content-img skeleton">
+            </div>
+            <div class="movie-details">
+                <div class="movie-title">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+                <div class="games-tags">
+                    <button class="overview-btn">overview</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <section class="section-with-grid movies-section">
+        <div class="heading heading-black">Movies Picks!!</div>
+        <div class="movies-section-bg section-overlay"></div>
+        <div class="grid-container movies-grid">
+            <span class="refresh-guildlines black">double click anywhere to refresh</span>
+            <!-- this will be filled by cards from template  -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="heading footer-heading flex-center">I hope you have found your next entertainment pick<img
+                src="images/smile.png" class="smile-img"></div>
+        <div class="credits-container">
+            <div class="credits">
+                <div class="credits-heading">Api Used</div>
+                <ul class="credits-list">
+                    <li>Joke API</li>
+                    <li>RAWG for games</li>
+                    <li>Shazam Core for music</li>
+                    <li>TMDB for movies </li>
+                </ul>
+            </div>
+            <div class="credits">
+                <div class="credits-heading">Images Used</div>
+                <ul class="credits-list">
+                    <li>
+                        Games background <a
+                            href="https://unsplash.com/@ahmedatef19?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ahmed
+                            Atef</a> on <a
+                            href="https://unsplash.com/s/photos/gaming-wallpaper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </li>
+                    <li>
+                        Music background <a
+                            href="https://unsplash.com/@icons8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Icons8Team</a>
+                        on <a
+                            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </li>
+                    <li>
+                        Movies background <a
+                            href="https://unsplash.com/@jontyson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jon
+                            Tyson</a> on <a
+                            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    </li>
+                    <li>
+                        Smile logo <a href="https://www.flaticon.com/free-icons/smile" title="smile icons">Smile icons
+                            created by Vectors Market - Flaticon</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

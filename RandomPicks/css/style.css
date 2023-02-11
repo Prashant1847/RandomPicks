@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-bg-color: #ffdead99;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 1px; /*this is to avoid margin collision with about section */
+}
+
+a {
+    text-decoration: none;
+}
+
+canvas {
+    z-index: 1;
+    position: absolute
+}
+
+.site-title,
+.about-title,
+.about-des-heading {
+    font-family: 'Indie Flower', cursive;
+}
+
+/* utility class */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.heading {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    font-size: 2.8rem;
+    font-size: clamp(2.5rem, 3.3vw, 3.5rem);
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.heading-black {
+    color: black;
+}
+
+/* backgroun overlay on section */
+.section-overlay {
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+/* site title */
+.site-title {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+}
+
+.logo {
+    width: 50px;
+    position: absolute;
+}
+
+.title-word {
+    display: inline-flex;
+}
+
+/* class for site title anination  */
+.animate-prop {
+    visibility: visible;
+    position: absolute;
+    left: 50%;
+}
+
+
+/*animation played after title animation */
+.logo,
+.joke-anim,
+.about-section {
+    opacity: 0;
+    animation: showUsingOpacity 2s 3.5s 1 forwards;
+}
+
+.joke-anim {
+    animation-delay: 4.7s;
+}
+
+@keyframes showUsingOpacity {
+    to {
+        opacity: 1;
+    }
+}
+
+/* about section */
+
+.about-section {
+    display: grid;
+    padding: 3rem 2rem;
+    width: 90%;
+    grid-template-columns: 30% 10% 20% 10% 30%;
+    margin: 3rem auto;
+    margin-top: max(9.9%, 7rem);
+    background-color: var(--primary-bg-color);
+    box-shadow: 0 0 10px 10px var(--primary-bg-color);
+}
+
+
+.about-title {
+    font-size: 3.35rem;
+    padding-left: 1rem;
+    padding-top: 8%;
+    line-height: 1.1;
+}
+
+.word-about-title {
+    color: orange;
+}
+
+.arrowSign {
+    width: 60%;
+}
+
+.logo-about-section {
+    width: 90%;
+}
+
+/* about description */
+.about-des {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.about-des-heading {
+    font-size: 2.1rem;
+}
+
+.word-about-des {
+    color: red;
+}
+
+
+/* joke section */
+
+.joke-section {
+    margin: 0 auto;
+    position: relative;
+    height: 57vh;
+    border-radius: 5px;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.joke-bg {
+    background-image: url("../images/tomCruise_laughing.jpg");
+    filter: blur(2px);
+}
+
+.joke {
+    text-align: center;
+    width: max-content;
+    max-width: 65%;
+    padding: 1.5rem;
+    background-color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 5px;
+}
+
+.line-joke,
+.new-joke-btn {
+    color: white;
+}
+
+.line-joke {
+    font-size: .75rem;
+    margin-right: .5rem;
+
+}
+
+.new-joke-btn {
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    padding: .35rem .7rem;
+    cursor: pointer;
+}
+
+.new-joke-btn:hover {
+    color: black;
+    background-color: white;
+}
+
+/* skeleton animation related classes for loading grid items */
+.skeleton {
+    opacity: .7;
+    animation: skeleton-loading .9s linear infinite alternate;
+}
+
+.skeleton-text {
+    border-radius: .125rem;
+    margin-bottom: .25rem;
+    height: .5rem;
+    width: 100%;
+}
+
+.skeleton-text:last-child {
+    width: 80%;
+    margin-bottom: 0;
+}
+
+.skeleton-width50 {
+    width: 65%;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: rgba(255, 255, 255, 0.329);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.212);
+    }
+}
+
+
+/* common grid section styles */
+
+.section-with-grid {
+    margin: 3.5rem auto;
+    border-radius: 5px;
+    color: white;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 70%;
+    position: relative;
+    margin: auto;
+    gap: 2rem 4.23rem;
+}
+
+.grid-card {
+    background-color: black;
+    outline: 1px solid #ffffff3d;
+    border-radius: 4px;
+    padding: .6rem .8rem;
+    position: relative;
+}
+
+.content-img {
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+
+.refresh-guildlines {
+    position: absolute;
+    right: 21px;
+    top: -1%;
+    color: black;
+    font-size: .7rem;
+}
+
+.white {
+    color: rgba(255, 255, 255, 0.5);
+    /* white class is used games section */
+}
+
+.grid-img-container {
+    height: 16rem;
+    margin: auto;
+    margin-bottom: .9rem;
+}
+
+/* games section */
+.games-section-bg {
+    background-image: url("../images/gamesBg.jpg");
+    filter: blur(2px);
+}
+
+.game-img-container {
+    height: 14rem;
+}
+
+.game-details {
+    padding-left: 5%;
+    position: relative;
+    line-height: 2;
+    margin-top: .4rem;
+}
+
+.grid-item-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.games-tags>button {
+    border: 1px solid #ffffff8f;
+    border-radius: 2px;
+    padding: 0.2rem;
+    color: #ffffffb6;
+    margin-right: .3rem;
+    font-size: .74rem;
+    background: black;
+    transition: all .6s ease;
+}
+
+.games-tags>button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* styles for div which shows description about tags */
+.tags-description {
+    position: absolute;
+    word-spacing: 4px;
+    padding: 0.9rem;
+    border-radius: 4px;
+    bottom: 100%;
+    left: 0;
+    background: white;
+    width: max-content;
+    max-width: 90%;
+    line-height: 1.3;
+    color: black;
+    font-size: .9rem;
+    box-shadow: 0 0 4px 3px #ffffff8a;
+    opacity: 0;
+    animation: fadeIn .5s 0s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* end */
+/* end */
+
+
+/* song section */
+.songs-section-bg {
+    background-image: url("../images/songBg.jpg");
+    background-position-x: 50%;
+    filter: blur(2.5px);
+}
+
+.grid-container a {
+    color: black;
+    position: relative;
+}
+
+.grid-container a>div {
+    height: 100%;
+    color: white;
+}
+
+.song-title,
+.song-subtitle {
+    margin: .5rem 0;
+}
+
+.song-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.song-subtitle {
+    color: #ffffffb6;
+    font-size: .9rem;
+}
+
+/* movies section */
+
+.movies-section-bg {
+    background-image: url("https://images.unsplash.com/photo-1594908900066-3f47337549d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    filter: blur(5px);
+}
+
+/* movie template  */
+.movie-title {
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+}
+
+.imgNotAvailable{
+    background: #ffffff42;
+    padding: 15%;
+}
+
+.movie-details{position: relative;}
+
+/* footer  */
+
+footer {
+    background-color: var(--primary-bg-color);
+    box-shadow: 0 -5px 5px 5px var(--primary-bg-color);
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-heading {
+    color: orange;
+    font-size: 2.45rem;
+}
+
+.smile-img {
+    width: 45px;
+    aspect-ratio: 1;
+    margin-left: 1.2rem;
+    margin-top: -0.9rem;
+}
+
+.credits-container {
+    display: flex;
+    justify-content: center;
+}
+
+.credits {
+    width: 30%;
+}
+
+.credits-heading {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.65rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.credits-list>li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    padding: .3rem 0;
+}
+
+.credits-list a {
+    color: red;
+}
+
+@media screen and (max-width: 800px) {
+    
+    /* utitlity */
+    .heading{
+        padding-left: .63rem;
+        padding-right: .63rem;
+    }
+
+    /* about section */
+    .about-section {
+        grid-template-columns: none;
+        padding: .5rem;
+        text-align: center;
+        row-gap: .5rem;
+    }
+
+    .about-title, .about-des-heading {
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .logo-about-section {
+        width: 20%;
+        min-width: 6.2rem;
+    }
+
+    .arrow-div {
+        display: none;
+    }
+
+    .about-des {
+        font-size: 1rem;
+    }
+
+    /* common grid styles */
+
+    .section-with-grid {
+        padding-top: 2rem;
+    }
+
+    .grid-container {
+        width: 85%;
+        gap: 2rem 1rem;
+    }
+
+    .game-img-container {
+        height: 10rem;
+    }
+
+    .grid-img-container{height: 13rem;}
+
+    /* footer */
+    .footer-heading {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .smile-img {
+        margin-left: 0;
+    }
+
+    .credits-container {
+        row-gap: 2.5rem;
+    }
+
+}
+
+
+@media screen and (max-width: 570px) {
+
+    /* about sectoin */
+    .about-title, .about-des-heading{
+        font-size: 1.8rem;
+    }
+
+    /* joke */
+    .joke {
+        font-size: 1rem;
+    }
+
+    /* common grid  */
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem .5rem;
+        width: 95%;
+        padding: .2rem .5rem;
+    }
+
+    /* footer */
+    .footer-heading {
+        font-size: 1.9rem;
+    }
+
+    .credits-heading {
+        font-size: 1.4rem;
+    }
+
+    .credits-list>li {
+        font-size: .8rem;
+    }
+}
